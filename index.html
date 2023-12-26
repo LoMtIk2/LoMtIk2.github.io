@@ -6,29 +6,26 @@
   <link rel="stylesheet" href="style.css">
   <title>Black Cheats App</title>
   <script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="your_bot_username" data-size="large" data-radius="10" data-auth-url="https://your-website.com/auth"></script>
-  </head>
+</head>
 <body>
   <div class="container">
-    <h1>Привет <p id="username"></p>!<br>Нажмите на кнопку ниже, чтобы перейти в наш телеграм канал!</h1>
+    <h1>Привет <span id="username"></span>!<br>Нажмите на кнопку ниже, чтобы перейти в наш телеграм канал!</h1>
     <a href="https://t.me/blackcheats_br_bot" class="channel-link" target="_blank">Перейти</a>
   </div>
   <div class="datetime">
-    <P>Дата и время</P>
-  <div id="date"></div>
-  <div id="time"></div>
-</div>
+    <p>Дата и время</p>
+    <div id="date"></div>
+    <div id="time"></div>
+  </div>
+
   <script type="text/javascript">
     function authCallback(user) {
       console.log(user);
-      // Use the user object to access username
       var username = user.username;
-      // Display the username on the page
-      document.getElementById('username').innerText = "Username: " + username;
+      document.getElementById('username').innerText = username;
     }
-    let tg = window.Telegram.WebApp;
-tg.expand()
 
-function displayTime() {
+    function displayTime() {
       var date = new Date();
       var hours = date.getHours();
       var minutes = date.getMinutes();
@@ -37,43 +34,23 @@ function displayTime() {
       document.getElementById('time').innerText = timeString;
     }
 
-    // Update time every second
     setInterval(displayTime, 1000);
-
-    // Initial call to display time immediately
     displayTime();
+
     function updateDate() {
-    const now = new Date();
-    const dateElement = document.getElementById('date');
-    const day = String(now.getDate()).padStart(2, '0');
-    const monthNames = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
-    const month = monthNames[now.getMonth()];
-    const year = now.getFullYear();
-    dateElement.textContent = `${day} ${month} ${year}`;
+      const now = new Date();
+      const dateElement = document.getElementById('date');
+      const day = String(now.getDate()).padStart(2, '0');
+      const monthNames = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+      const month = monthNames[now.getMonth()];
+      const year = now.getFullYear();
+      dateElement.textContent = `${day} ${month} ${year}`;
     }
-    
+
     updateDate();
-
-const TelegramBot = require('node-telegram-bot-api');
-const token = '6868356294:AAG-R437liOJEvZnmk4OIzcgd6dXv43ia58';
-const bot = new TelegramBot(token, { polling: true });
-
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
-  const forwardChatId = '1427377367';
-  const username = msg.from.first_name;
-    // Проверяем, что сообщение не из целевого чата, чтобы избежать бесконечной пересылки
-    if (chatId !== forwardChatId) {
-      // Формируем сообщение в формате "ник: сообщение"
-      const formattedMessage = `(${username}):\n${msg.text}\n@${msg.from.username}`;
-      
-      // Пересылаем отформатированное сообщение в целевой чат
-      bot.sendMessage(forwardChatId, formattedMessage);
-    }
-  });
-
   </script>
+
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script scr="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
