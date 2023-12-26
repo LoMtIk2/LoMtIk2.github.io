@@ -1,1 +1,0 @@
-# LoMtIk2.github.io
