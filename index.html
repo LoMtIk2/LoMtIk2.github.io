@@ -5,24 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Black Cheats App</title>
-  <script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="your_bot_username" data-size="large" data-radius="10" data-auth-url="https://your-website.com/auth"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Привет <span id="username"></span>!<br>Нажмите на кнопку ниже, чтобы перейти в наш телеграм канал!</h1>
-    <a href="https://t.me/blackcheats_br" class="channel-link" target="_blank">Перейти<br><a id="bcbr">( @blackcheats_br )</a></a>
-      <div class="datetime">Дата и время<br><br>
-      <a id="date"></a><br>
-      <a id="time"></a>
-    </div>
+    <h1>Добро пожаловать!</h1>
+    <h3>Для того, чтобы перейти в телеграм канал:<br><a style="font-family: Roboto; font-size:25px; color: #0088cc;">@blackcheats_br</a><br>Нажмите на конпку ниже</h3>
+    <a href="https://t.me/blackcheats_br" class="telegram-link" target="_blank">Перейти в телеграм</a>
   </div>
-  <script type="text/javascript">
-    function authCallback(user) {
-      console.log(user);
-      var username = user.username;
-      document.getElementById('username').innerText = username;
-    }
+  <div class="datetime">
+    <p>Дата и время</p>
+    <div id="date"></div>
+    <div id="time"></div>
+  </div>
 
+  <script type="text/javascript">
     function displayTime() {
       var date = new Date();
       var hours = date.getHours();
@@ -47,8 +43,5 @@
 
     updateDate();
   </script>
-
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>
