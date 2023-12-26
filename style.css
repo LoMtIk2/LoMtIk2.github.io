@@ -12,7 +12,6 @@ body {
     height: 30px;
 }
 .container {
-    
   font-size: 10px;
   text-align: center;
   margin-top: 100px;
@@ -34,8 +33,6 @@ body {
   color: #fff;
   text-decoration: none;
   width: 200px;
-  align-items: center;
   border-radius: 5px;
-  text-align: center;
   margin-top: 200px;
 }
