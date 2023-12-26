@@ -24,6 +24,7 @@ body, html {
 }
 
 .datetime {
+  width: auto;
   border-radius: 10px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);
   padding: 0px 0px 25px 0px;
@@ -31,5 +32,5 @@ body, html {
   background-color: #0088cc;
   color: white;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
