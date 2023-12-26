@@ -27,10 +27,19 @@ body, html {
   width: auto;
   border-radius: 10px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);
-  padding: 0px 0px 25px 0px;
+  /*padding: 0px 0px 25px 0px;*/
   font-size: 20px;
   background-color: #0088cc;
   color: white;
   text-align: center;
   margin-bottom: 0;
+}
+footer {
+font-size: 10px;
+  padding: 0px 0px 25px 0px;
+  background-color: #006699;
+  color: white;
+  text-align: center;
+  margin-bottom: 0; {
+
 }
