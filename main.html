@@ -3,52 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Black Cheats App</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <style>
-    body {
-        font-family:Arial, sans-serif;
-    }
-
-    .datetime p {
-        padding-top: 6px;
-        padding-left: 25px;
-        background-color: rgba(3, 52, 109, 0);
-        border-radius: 5px;
-        width: 150px;
-        height: 30px;
-    }
-    .container {
-        
-      font-size: 10px;
-      text-align: center;
-      margin-top: 100px;
-    }
-    .channel-link {
-        font-weight: bold;
-      padding: 10px 20px;
-      font-size: 20px;
-      background-color: #0088cc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .datetime {
-        margin-left: 110px;
-        font-weight: bold;
-      padding: 10px 20px;
-      font-size: 20px;
-      background-color: #0088cc;
-      color: #fff;
-      text-decoration: none;
-      width: 200px;
-      align-items: center;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 200px;
-    }
-  </style>
-</head>
+  </head>
 <body>
   <div class="container">
     <h1>Привет <script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="blackcheats_br" data-size="large" data-radius="10" data-auth-url="https://your-website.com/auth"></script>        ! <br>Нажмите на кнопку ниже, чтобы перейти в наш телеграм канал!</h1>
@@ -82,16 +39,18 @@
       // You can now use this information to customize the user experience in your web app
     }
     function updateDate() {
-	const now = new Date();
-	const dateElement = document.getElementById('date');
-	const day = String(now.getDate()).padStart(2, '0');
-	const monthNames = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
-	const month = monthNames[now.getMonth()];
-	const year = now.getFullYear();
-	dateElement.textContent = `${day} ${month} ${year}`;
-  }
-  
-  updateDate();
+    const now = new Date();
+    const dateElement = document.getElementById('date');
+    const day = String(now.getDate()).padStart(2, '0');
+    const monthNames = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+    const month = monthNames[now.getMonth()];
+    const year = now.getFullYear();
+    dateElement.textContent = `${day} ${month} ${year}`;
+    }
+    
+    updateDate();
   </script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script scr="main.js"></script>
 </body>
 </html>
