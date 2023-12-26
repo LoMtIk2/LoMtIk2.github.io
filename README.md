@@ -1,2 +1,1 @@
 # README
-@import{{main.html}}
