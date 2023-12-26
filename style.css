@@ -27,6 +27,7 @@ body {
   border-radius: 5px;
 }
 .datetime {
+    margin-left: 50%;
     font-weight: bold;
   padding: 10px 20px;
   font-size: 20px;
