@@ -23,6 +23,10 @@ body, html {
   border-radius: 5px;
 }
 
+#time {
+  padding: 0px 0px 10px 0px;
+}
+
 .datetime {
   width: auto;
   border-top-right-radius: 20px;
