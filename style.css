@@ -25,9 +25,10 @@ body, html {
 
 .datetime {
   width: auto;
-  border-radius: 20px;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);
-  /*padding: 0px 0px 25px 0px;*/
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);*/
+ 
   font-size: 20px;
   background-color: #0088cc;
   color: white;
@@ -36,9 +37,13 @@ body, html {
 }
 #footer {
   width: auto;
-  height: auto;
-  font-size: 10px;
+  height: 30px;
+  padding: 10px 0px 35px 0px;
+  justify-items: center;
+  align-items: center;
+  font-size: 20px;
   background-color: #006699;
   color: white;
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
