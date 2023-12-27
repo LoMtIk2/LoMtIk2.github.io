@@ -42,10 +42,10 @@ body, html {
 #footer {
   width: auto;
   height: 30px;
-  padding: 10px 0px 40px 0px;
+  padding: 10px 0px 41px 0px;
   justify-items: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 16px;
   background-color: #006699;
   color: white;
   border-top-right-radius: 20px;
