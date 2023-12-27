@@ -13,6 +13,18 @@
     <a href="https://t.me/blackcheats_br" class="telegram-link" target="_blank">Перейти в телеграм</a>
   </div>
   <div class="datetime">
+    <div class="dropdown">
+      <button class="dropbtn">Обновления <div class="menu-icon">&#9776;</div></button>
+      <div class="dropdown-content">
+        <h3>Последние обновления</h3>
+        <ul>
+          <li><s>v0.03 - Winter</s> (Скоро)</li>
+          <li>v0.02 - Update button Info</li>
+          <li>v0.01 - Alpha Release</li>
+        </ul>
+        
+      </div>
+    </div>
     <p>Дата и время</p>
     <div id="date"></div>
     <div id="time"></div>
@@ -44,7 +56,8 @@
     updateDate();
   </script>
   <style>
-    body, html {
+body, html {
+  width: 100%;
   height: 100%;
   margin: 0;
   display: flex;
@@ -54,6 +67,21 @@
   background-color: white;
   justify-content: space-between;
 }
+
+/*button {
+    font-weight: bold;
+    background-color: #0088cc;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 7px;
+  }*/
 
 .container {
   text-align: center;
@@ -74,11 +102,9 @@
 }
 
 .datetime {
-  width: auto;
+  width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.218);*/
- 
   font-size: 20px;
   background-color: #0088cc;
   color: white;
@@ -86,7 +112,7 @@
   margin-bottom: 0;
 }
 #footer {
-  width: auto;
+  width: 100%;
   height: 30px;
   padding: 10px 0px 41px 0px;
   justify-items: center;
@@ -97,6 +123,91 @@
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+
+.dropbtn {
+  transition: transform 1s ease;
+  overflow: hidden;
+  border: none;
+  font-weight: bold;
+  margin: 0;
+  width:100%;
+  display: flex;
+  font-size: 20px;
+  padding: 20px 10px 20px 10px;
+  border-radius: 20px;
+  background-color: #006699;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  
+}
+
+ul {
+  list-style: none;
+  color: black;
+  
+}
+
+ul li {
+  font-weight:bold;
+  text-align: left;
+  color: black;
+  padding: 10px 0;
+}
+.dropbtn:hover {
+  transform: scale(1);
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0088cc;
+}
+
+.menu-icon {
+  position: fixed;
+  padding: 0px 90%;
+}
+
+.dropdown-content {
+  opacity: 0;
+  transition: max-height 1s ease, opacity 1s ease;
+  overflow: auto;
+  display: none;
+  position:static;
+  background-color: #ffffff;
+  color: white;
+  border-radius: 20px;
+  cursor:context-menu;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content:hover {
+  opacity: 1;
+}
+
+
+.dropdown-content a {
+  text-align: left;
+  font-weight: bold;
+  color: #000000;
+  padding: 15px 25px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-icon:hover {
+  background-color: #f0f0f000;
+  animation: rotate90 0.5s linear forwards;
+}
+
   </style>
 </body>
 </html>
